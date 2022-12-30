@@ -25,7 +25,7 @@ async def start(event):
     link_preview=False,
     buttons=(
       [
-        Button.url('😈 Channel', 'https://t.me/evilshadowfed'),
+        Button.url('😈 Channel', 'https://t.me/evilshadowkingdom'),
         Button.url('🧸 Source', 'https://youtu.be/X_QjNi7NiIo')
       ]
     )
@@ -39,7 +39,7 @@ async def help(event):
     link_preview=False,
     buttons=(
       [
-        Button.url('😈 Channel','https://t.me/evilshadowfed'),
+        Button.url('😈 Channel','https://t.me/evilshadowkingdom'),
         Button.url('🧸 Source', 'https://youtu.be/X_QjNi7NiIo')
       ]
     )
@@ -94,7 +94,7 @@ async def mentionall(event):
       break
     usrnum += 1
     usrtxt += f"[{usr.first_name}](tg://user?id={usr.id}) "
-    if usrnum == 5:
+    if usrnum == 1:
       if mode == "text_on_cmd":
         txt = f"{usrtxt}\n\n{msg}"
         await client.send_message(chat_id, txt)
