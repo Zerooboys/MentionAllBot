@@ -12,9 +12,9 @@ logging.basicConfig(
 )
 LOGGER = logging.getLogger(__name__)
 
-api_id = int(os.environ.get("APP_ID"))
-api_hash = os.environ.get("API_HASH")
-bot_token = os.environ.get("TOKEN")
+api_id = int(os.environ.get("API_ID","9181844"))
+api_hash = os.environ.get("API_HASH","996a3e7194a4f07576fda5c20bb1138b")
+bot_token = os.environ.get("TOKEN","5571916181:AAH18F2V38rFsnDdQ6qJnCUH8CB5XpwTSxI")
 client = TelegramClient('client', api_id, api_hash).start(bot_token=bot_token)
 spam_chats = []
 
@@ -25,8 +25,8 @@ async def start(event):
     link_preview=False,
     buttons=(
       [
-        Button.url('📣 Channel', 'https://t.me/harp_tech'),
-        Button.url('📦 Source', 'https://github.com/AnjanaMadu/MentionAllBot')
+        Button.url('😈 Channel', 'https://t.me/harp_tech'),
+        Button.url('🧸 Source', 'https://github.com/AnjanaMadu/MentionAllBot')
       ]
     )
   )
@@ -39,8 +39,8 @@ async def help(event):
     link_preview=False,
     buttons=(
       [
-        Button.url('📣 Channel', 'https://t.me/harp_tech'),
-        Button.url('📦 Source', 'https://github.com/AnjanaMadu/MentionAllBot')
+        Button.url('😈 Channel', 'https://t.me/harp_tech'),
+        Button.url('🧸 Source', 'https://github.com/AnjanaMadu/MentionAllBot')
       ]
     )
   )
