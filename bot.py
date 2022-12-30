@@ -14,7 +14,7 @@ LOGGER = logging.getLogger(__name__)
 
 api_id = int(os.environ.get("API_ID","9181844"))
 api_hash = os.environ.get("API_HASH","996a3e7194a4f07576fda5c20bb1138b")
-bot_token = os.environ.get("TOKEN","5571916181:AAH18F2V38rFsnDdQ6qJnCUH8CB5XpwTSxI")
+bot_token = os.environ.get("TOKEN","5571916181:AAEO6756i7TKPw7cAJYeMqHD3ZFEygUeVvc")
 client = TelegramClient('client', api_id, api_hash).start(bot_token=bot_token)
 spam_chats = []
 
@@ -33,7 +33,7 @@ async def start(event):
 
 @client.on(events.NewMessage(pattern="^/help$"))
 async def help(event):
-  helptext = "**Help Menu of MentionAllBot**\n\nCommand: /mentionall\n__You can use this command with text what you want to mention others.__\n`Example: /mentionall Good Morning!`\n__You can you this command as a reply to any message. Bot will tag users to that replied messsage__.\n\nFollow[clickme](https://t.me/mentionxrepo) on Github"
+  helptext = "**Help Menu of MentionAllBot**\n\nCommand: /mentionall\n__You can use this command with text what you want to mention others.__\n`Example: /mentionall Good Morning!`\n__You can you this command as a reply to any message. Bot will tag users to that replied messsage__.\n\nFollow [clickme](https://t.me/mentionxrepo) on Github"
   await event.reply(
     helptext,
     link_preview=False,
